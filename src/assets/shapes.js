@@ -9,17 +9,17 @@ class Shapes {
 
 class Circle extends Shapes {
     constructor(text, textColour, colour){
-        Shapes.call(this, text, textColour, colour)
+        super(text, textColour, colour)
 
     }
 
     createCircle(){
 
-        return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="50" r="40" stroke="black" stroke-width="3" fill="$(this.colour)" />
+        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="${this.colour}" />
       
-        <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="$(this.textColour)">$(this.text)</text>
-      </svg>` 
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700" fill="${this.textColour}">${this.text}</text>
+      </svg>`
 
     }
 };
@@ -27,16 +27,16 @@ class Circle extends Shapes {
 
 class Square extends Shapes {
     constructor(text, textColour, colour){
-        Shapes.call(this, text, textColour, colour)
+        super( text, textColour, colour)
 
     }
 
     createSquare(){
 
-        return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        <rect x="30" y="30" width="140" height="140" fill="$(this.colour)" />
+        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <rect x="80" y="30" width="140" height="140" fill="${this.colour}" />
       
-        <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="$(this.colour)">$(this.text)</text>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700" fill="${this.textColour}">${this.text}</text>
       </svg>`
 
     }
@@ -45,16 +45,16 @@ class Square extends Shapes {
 
 class Triangle extends Shapes {
     constructor(text, textColour, colour){
-        Shapes.call(this, text, textColour, colour)
+        super(text, textColour, colour)
 
     }
 
     createTriangle(){
 
         return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="100,10 40,140 160,140" fill="$(this.colour)" />
+        <polygon points="150,10 40,140 260,140" fill="${this.colour}" />
       
-        <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="$(this.textColour)">$(this.text)</text>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700" fill="${this.textColour}">${this.text}</text>
       </svg>`
 
     }
