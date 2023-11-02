@@ -8,7 +8,7 @@ describe('Square',() =>{
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700" fill="blue">lol</text>
       </svg>`
       const svgc = new Square("lol", "blue", "red");
-      expect(svg).toEqual(svgc);
+      expect(svg).toEqual(svgc.createSquare());
     });
 });
 
@@ -20,7 +20,7 @@ describe('Circle',() =>{
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700" fill="blue">lol</text>
       </svg>`
       const svgc = new Circle("lol", "blue", "red");
-      expect(svg).toEqual(svgc);
+      expect(svg).toEqual(svgc.createCircle());
     });
 });
 
@@ -32,6 +32,6 @@ describe('Triangle',() =>{
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700" fill="blue">lol</text>
       </svg>`
       const svgc = new Triangle("lol", "blue", "red");
-      expect(svg).toEqual(svgc);
+      expect(svg).toEqual(svgc.createTriangle());
     });
 });
